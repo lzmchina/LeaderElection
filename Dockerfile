@@ -4,4 +4,3 @@ RUN cd /codes && go build -o leaderElector
 
 FROM  ubuntu
 COPY --from=pre /codes/leaderElector /usr/local/bin/
-ENTRYPOINT ["leaderElector", "--id=$(hostname)"]
